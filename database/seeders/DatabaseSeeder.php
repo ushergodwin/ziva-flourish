@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         User::updateOrCreate(['email' => 'thezivafkourish@gmail.com'], [
             'name' => 'Ziva Admin',
-            'email' => 'thezivafkourish@gmail.com',
+            'email' => 'thezivaflourish@gmail.com',
             'password' => Hash::make('Ziva@2025'),
             'email_verified_at' => now(),
         ]);
