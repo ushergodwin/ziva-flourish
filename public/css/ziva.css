@@ -1,0 +1,202 @@
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #556c4c; /* primary green */
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #475d40; /* deeper hover */
+    color: #ffffff;
+}
+
+/* FOOTER SECTION OVERRIDES */
+.custom-footer {
+    background-color: #253d2b; /* dark green */
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 15px;
+}
+
+.custom-footer .footer-title h3 {
+    color: #9fbe57; /* highlight */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.custom-footer p,
+.custom-footer li,
+.custom-footer span {
+    color: #ffffff;
+}
+
+.custom-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-footer a:hover {
+    color: #9fbe57;
+}
+
+.custom-footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.custom-footer ul li {
+    margin-bottom: 8px;
+}
+
+.custom-footer .subscribe-form input {
+    background-color: #ffffff;
+    color: #2a3b2c;
+    border: 1px solid #ccdba7;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.custom-footer .subscribe-form button {
+    background-color: #556c4c;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.custom-footer .subscribe-form button:hover {
+    background-color: #475d40;
+}
+
+/* FOOTER BOTTOM STRIP */
+.custom-footer .footer-bottom {
+    background-color: #2a3b2c;
+    padding: 20px 0;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.custom-footer .footer-bottom a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.custom-footer .footer-bottom a:hover {
+    color: #9fbe57;
+}
+/* Deeper green for header bottom */
+.custom-header {
+    background-color: #2a3b2c; /* deeper green */
+    padding: 8px 0; /* smaller height */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Links and menu items */
+.custom-header a {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+    font-size: 15px;
+}
+
+.custom-header a:hover,
+.custom-header .active-page {
+    color: #9fbe57 !important; /* bright green hover */
+}
+
+/* Logo size */
+.custom-header .logo img {
+    max-height: 45px;
+}
+
+/* Header top */
+.header-top {
+    background-color: #253d2b; /* slightly different deep green */
+    padding: 6px 0;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.header-top p {
+    margin: 0;
+    margin-right: 15px;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.header-top .zmdi {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.header-top .social-icons a {
+    color: #ffffff;
+    margin-left: 8px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.header-top .social-icons a:hover {
+    color: #9fbe57;
+}
+
+/* Mobile menu */
+.mobile-menu-area {
+    background-color: #2a3b2c;
+}
+
+.mobile-menu-area a {
+    color: #ffffff;
+    padding: 10px 15px;
+    display: block;
+}
+
+.mobile-menu-area a:hover {
+    background-color: #3d5a3a;
+    color: #ffffff;
+}
+
+.ziva-logo-text {
+    background-color: #475d40;
+    color: white;
+    font-family: "Georgia", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.ziva-logo-text .the {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.ziva-logo-text .ziva {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.ziva-logo-text .centre {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
