@@ -28,9 +28,7 @@
                         <div class="mgea-full-width">
                             <div class="row">
                                 <div class="col-lg-2 col-md-6 col-sm-9 xs-3">
-                                    <div class="logo">
-                                        <a href="/"><img src="/images/logo/ziva-logo-resized.png" alt=""></a>
-                                    </div>
+                                    <a href="/"><img src="/images/logo/ziva-logo.png" alt=""></a>
                                 </div>
                                 <div class="col-lg-8 d-none d-lg-block">
                                     <div class="menu">
