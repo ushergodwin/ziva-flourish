@@ -13,6 +13,7 @@
 <meta name="twitter:title" content="Ziva Flourish Centre | Culinary Arts & Soul Wellness">
 <meta name="twitter:description" content="A nourishing place for cookery classes, therapy, family wellness and Christian growth. Book a class or therapy session today.">
 <meta name="twitter:image" content="{{ asset('ziva-logo-rounded.png')}}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @yield('meta')
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/core.css">
@@ -25,40 +26,3 @@
 <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/ziva.css">
-<style>
-    /* Font variable definitions */
-:root {
-  --primary-font: 'Playfair Display', serif;
-  --text-font: 'Nunito', sans-serif;
-  --secondary-font: 'Open Sans', sans-serif;
-}
-
-/* Global font reset */
-body, html {
-  font-family: var(--text-font) !important;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Headings and brand elements */
-h1, h2, h3, h4, h5, h6,
-.brand-title, .headline, .site-title {
-  font-family: var(--primary-font) !important;
-  font-weight: 700;
-}
-
-/* Body text and general UI */
-p, span, li, a, td, th, label,
-input, textarea, button, small {
-  font-family: var(--text-font) !important;
-}
-
-/* Official/internal or fallback usage */
-.official-docs, .social-media-fallback {
-  font-family: var(--secondary-font) !important;
-}
-/* * {
-  font-family: var(--text-font) !important;
-} */
-
-</style>

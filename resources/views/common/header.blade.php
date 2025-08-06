@@ -36,7 +36,7 @@
                                             <ul>
                                                 <li><a href="/" @class(['active-page' => isActivePage('home')])>Home</a></li>
                                                 <li><a href="/about-us" @class(['active-page' => isActivePage('about')])>About Us</a></li>
-                                                <li><a href="/services" @class(['active-page' => isActivePage('services')])>Services</a></li>
+                                                <li><a href="/services" @class(['active-page' => isActivePage('services') || isActivePage('services.show')])>Services</a></li>
                                                 <li><a href="/blog"  @class(['active-page' => isActivePage('blog') || isActivePage('blog.post')])>Blog</a></li>
                                                 <li><a href="/contact-us" @class(['active-page' => isActivePage('contact')])>Contact Us</a></li>
                                             </ul>
@@ -53,13 +53,13 @@
                     <div class="mobile-menu-area d-lg-none">
                         <div class="container">
                             <div class="col-md-12">
-                                <nav id="dropdown">
-                                    <ul>
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="/about-us">About Us</a></li>
-                                        <li><a href="/services">Services</a></li>
-                                        <li><a href="/blog">Blog</a></li>
-                                        <li><a href="/contact-us">Contact Us</a></li>
+                                <nav id="mobile-dropdown">
+                                      <ul>
+                                        <li><a href="/" @class(['active-page' => isActivePage('home')])>Home</a></li>
+                                        <li><a href="/about-us" @class(['active-page' => isActivePage('about')])>About Us</a></li>
+                                        <li><a href="/services" @class(['active-page' => isActivePage('services') || isActivePage('services.show')])>Services</a></li>
+                                        <li><a href="/blog"  @class(['active-page' => isActivePage('blog') || isActivePage('blog.post')])>Blog</a></li>
+                                        <li><a href="/contact-us" @class(['active-page' => isActivePage('contact')])>Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>

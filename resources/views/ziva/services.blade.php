@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    @include('common.early-access')
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->  
@@ -41,15 +42,23 @@
                         <div class="row mb-n-30px">
                             @foreach ($services as $item)
                                 <div class="col-lg-4 col-md-6 col-sm-12 mb-30px">
-                                    <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
+                                    <a href="/services/{{ $item?->slug}}">
+                                        <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
+                                    </a>
                                     <div class="pricing-table text-center">
                                         <div class="pricing-title">
-                                            <h3>{{ $item?->name }}</h3>
+                                            <a href="/services/{{ $item?->slug}}">
+                                                <h3>{{ $item?->name }}</h3>
+                                            </a>
                                         </div>
                                         <div class="pricing-desc">
                                             <h2>{{ number_format($item?->price)}}<span class="date">ugx</span></h2>
                                             <ul>
-                                                <li>{{ $item?->price_note }}</li>
+                                                <li>
+                                                    <a href="/services/{{ $item?->slug}}">
+                                                        {{ $item?->price_note }}
+                                                    </a>
+                                                    </li>
                                             </ul>
                                             <div class="book-now">
                                                 <a href="javascript:void(0)" onclick="bookService('{{ $item->name }}', '{{ $company->whatsapp }}', '{{ $item->id}}')" >Book now</a>

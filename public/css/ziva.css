@@ -200,3 +200,262 @@ body {
     font-size: 1.2rem;
     margin-top: 5px;
 }
+
+:root {
+    --primary-font: "Playfair Display", serif;
+    --text-font: "Nunito", sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
+}
+
+/* Global font reset */
+body,
+html {
+    font-family: var(--text-font) !important;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Headings and brand elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-title,
+.headline,
+.site-title {
+    font-family: var(--primary-font) !important;
+    font-weight: 700;
+}
+
+/* Body text and general UI */
+p,
+span,
+li,
+a,
+td,
+th,
+label,
+input,
+textarea,
+button,
+small {
+    font-family: var(--text-font) !important;
+}
+
+/* Official/internal or fallback usage */
+.official-docs,
+.social-media-fallback {
+    font-family: var(--secondary-font) !important;
+}
+/* * {
+  font-family: var(--text-font) !important;
+} */
+.swal2-container {
+    z-index: 99999 !important;
+}
+/* Force mobile menu styles - highest specificity */
+.header .mobile-menu-area {
+    background-color: #2a3b2c !important;
+    position: relative;
+    z-index: 1000;
+}
+
+.header .mobile-menu-area #mobile-dropdown {
+    background-color: #2a3b2c !important;
+    display: none; /* Hidden by default */
+}
+
+.header .mobile-menu-area #mobile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.header .mobile-menu-area #mobile-dropdown ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.header .mobile-menu-area #mobile-dropdown ul li a {
+    color: #fff !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    text-decoration: none !important;
+}
+
+.header .mobile-menu-area #mobile-dropdown ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.header .mobile-menu-area #mobile-dropdown ul li a.active-page {
+    color: #f8d56b !important;
+    font-weight: bold !important;
+}
+
+/* Mobile menu trigger button */
+.mobile-menu-trigger,
+#mobile-dropdown {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    text-align: right;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .mobile-menu-trigger {
+        display: block !important;
+    }
+
+    /* Show menu when active */
+    .mobile-menu-area #mobile-dropdown.active {
+        display: block !important;
+    }
+}
+/* Animation styles for mobile dropdown */
+#mobile-dropdown {
+    transition: all 0.3s ease-out !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    display: none !important;
+}
+
+#mobile-dropdown.active {
+    display: block !important;
+    max-height: 500px !important; /* Adjust based on your content height */
+}
+
+/* Smooth transitions for menu items */
+#mobile-dropdown ul li {
+    transition: all 0.2s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+#mobile-dropdown.active ul li {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Staggered animation for menu items */
+#mobile-dropdown.active ul li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+#mobile-dropdown.active ul li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+#mobile-dropdown.active ul li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+#mobile-dropdown.active ul li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+#mobile-dropdown.active ul li:nth-child(5) {
+    transition-delay: 0.3s;
+}
+.mobile-menu-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-trigger .zmdi-close {
+    transform: rotate(180deg);
+}
+
+/* ✨ Perfectly Aligned Ribbon ✨ */
+.early-access-ribbon {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #75bb04, #085215, #0ac044);
+    color: #fff;
+    padding: 14px 0;
+    z-index: 100;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.static-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.main-text {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.scrolling-details {
+    width: 100%;
+    overflow: hidden;
+}
+
+.details-content {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    font-weight: 600;
+}
+
+.cta {
+    font-weight: 800;
+    background: #2a3b2c;
+    color: #ffd700 !important;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-shadow: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .static-content {
+        gap: 10px;
+        font-size: 20px;
+    }
+    .main-text {
+        font-size: 20px;
+    }
+    .cta {
+        padding: 3px 10px;
+        font-size: 14px;
+    }
+    .details-content {
+        font-size: 20px;
+    }
+}
+
+/* Pulsing hover effect */
+.early-access-ribbon:hover {
+    animation: pulse 1s ease infinite alternate, sparkle 3s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.95;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+    }
+}

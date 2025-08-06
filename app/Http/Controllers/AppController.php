@@ -55,20 +55,25 @@ class AppController extends Controller
                 'preferred_date' => 'required|date',
                 'notes' => 'nullable|string|max:500',
                 'service_name' => 'nullable|string|max:100',
+                'preferred_time' => 'string|max:10',
+                'number_of_people' => 'nullable|integer|min:1|max:100',
             ]);
 
             $data = $validated;
-            $preferred_date_time = $request->input('preferred_date');
+
+            $preferred_date_time = $data['preferred_date'] . ' ' . ($data['preferred_time'] ?? '00:00:00');
+
 
             // extract date and time 
             $data['preferred_date'] = Carbon::parse($preferred_date_time)->format('Y-m-d');
             $data['preferred_time'] = Carbon::parse($preferred_date_time)->format('H:i:s');
-            $data['status'] = 'pending'; // Default status
+            $data['status'] = 'pending';
 
-            unset($data['service_name']); // Remove service_name, not needed in Booking model
+            unset($data['service_name']);
+            unset($data['preferred_time']);
+            unset($data['number_of_people']);
             DB::beginTransaction();
             $booking = new Booking($data);
-            $booking->status = 'pending'; // Default status
             $booking->save();
 
             // Send booking request email

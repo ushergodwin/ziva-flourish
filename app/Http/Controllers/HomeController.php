@@ -142,6 +142,23 @@ class HomeController extends Controller
         ]);
     }
 
+    public function showService($slug)
+    {
+        $service = Service::where('slug', $slug)->firstOrFail();
+        $company = CompanyInfo::first();
+        $openingHours = OpeningHour::all();
+        $relatedServices = Service::where('is_active', true)
+            ->where('service_category_id', $service->service_category_id)
+            ->where('id', '!=', $service->id)
+            ->limit(3)
+            ->get();
+        return view('ziva.service-details', [
+            'service' => $service,
+            'company' => $company,
+            'openingHours' => $openingHours,
+            'relatedServices' => $relatedServices,
+        ]);
+    }
     public function blog(Request $request)
     {
         $query = strip_tags($request->query('q'));

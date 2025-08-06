@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    @include('common.early-access')
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->  
@@ -134,15 +135,25 @@
                     <div class="row mb-n-30px">
                         @foreach ($services as $item)
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-30px">
-                                <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
+                                <a href="/services/{{ $item?->slug}}">
+                                    <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
+                                </a>
                                 <div class="pricing-table text-center">
                                     <div class="pricing-title">
-                                        <h3>{{ $item?->name }}</h3>
+                                         <a href="/services/{{ $item?->slug}}">
+                                            <h3>{{ $item?->name }}</h3>
+                                        </a>
                                     </div>
                                     <div class="pricing-desc">
-                                        <h2>{{ number_format($item?->price)}}<span class="date">ugx</span></h2>
+                                        <a href="/services/{{ $item?->slug}}">
+                                            <h2>{{ number_format($item?->price)}}<span class="date">ugx</span></h2>
+                                        </a>
                                         <ul>
-                                            <li>{{ $item?->price_note }}</li>
+                                            <li>
+                                                <a href="/services/{{ $item?->slug}}">
+                                                    {{ $item?->price_note }}
+                                                </a>
+                                            </li>
                                         </ul>
                                         <div class="book-now">
                                             <a href="javascript:void(0)" onclick="bookService('{{ $item->name }}', '{{ $company->whatsapp }}', '{{ $item->id}}')" >Book now</a>
@@ -271,9 +282,17 @@
                 </div>
             </div>
             <!--our blog end-->
-            <!--Our partener start-->
+            <!--Our partner start-->
             <hr>
             <div class="our-partner">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="section-title text-center">
+                            <h2>Trusted By</h2>
+                            <p> Serving With Excellence, Rooted in Faith. At Ziva Flourish Centre, we’re honored to walk alongside individuals, families, and organizations who share our vision for Christ-centered transformation. Our partnerships reflect God’s faithfulness in every season.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="row">
                         @foreach ($partners as $item)

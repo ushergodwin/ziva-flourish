@@ -16,11 +16,12 @@ Route::post('/subscribe-to-newsletters', [HomeController::class, 'subscribe'])->
 Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 // services
 Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/services/{slug}', [HomeController::class, 'showService'])->name('services.show');
 // contact-us
 Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact');
 
 // book-service
-Route::post('/book-service', [AppController::class, 'bookService'])->name('book-service');
+Route::post('/book-service', [AppController::class, 'bookService'])->name('bookings.store');
 // send-message
 Route::post('/send-message', [AppController::class, 'submitContact'])->name('send-message');
 
