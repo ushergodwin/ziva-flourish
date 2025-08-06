@@ -279,21 +279,29 @@
                             </div>
                         @endforeach
                     </div>
+                    <!-- View More btn -->
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <a href="/blog" class="view-more-btn">
+                                View More
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--our blog end-->
             <!--Our partner start-->
             <hr>
-            <div class="our-partner">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="section-title text-center">
-                            <h2>Trusted By</h2>
-                            <p> Serving With Excellence, Rooted in Faith. At Ziva Flourish Centre, we’re honored to walk alongside individuals, families, and organizations who share our vision for Christ-centered transformation. Our partnerships reflect God’s faithfulness in every season.</p>
+            <div class="our-partner pt-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="section-title text-center">
+                                <h2>Trusted By</h2>
+                                <p> Serving With Excellence, Rooted in Faith. At Ziva Flourish Centre, we’re honored to walk alongside individuals, families, and organizations who share our vision for Christ-centered transformation. Our partnerships reflect God’s faithfulness in every season.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
                     <div class="row">
                         @foreach ($partners as $item)
                             <div class="col-md-3">
