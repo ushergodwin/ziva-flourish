@@ -207,7 +207,7 @@
             </div>
             <!--Testimonial start-->
             <!-- style="background-image: url('{{ asset('storage/' . $page->background_image) }}')" -->
-            <div class="testimonial">
+            <div class="testimonial ptb-30">
                 <div>
                     <div class="container">
                         <div class="row">
@@ -233,8 +233,7 @@
             </div>
             <!--Testimonial end-->
             <!--our blog start-->
-            <hr>
-            <div class="our-blog pt-30 grey-bg">
+            <div class="our-blog ptb-30 grey-bg mt-3">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
@@ -280,7 +279,7 @@
                         @endforeach
                     </div>
                     <!-- View More btn -->
-                    <div class="row mt-4">
+                    <div class="row mt-3 mb-2">
                         <div class="col-12 text-center">
                             <a href="/blog" class="view-more-btn">
                                 View More
@@ -290,9 +289,7 @@
                 </div>
             </div>
             <!--our blog end-->
-            <!--Our partner start-->
-            <hr>
-            <div class="our-partner pt-100">
+            <div class="our-partner ptb-30">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">

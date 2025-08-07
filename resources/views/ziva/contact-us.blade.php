@@ -201,7 +201,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="breadcrumbs-title">
-                                <h1>{{ $page?->title }}</h1>
+                             
                             </div>
                         </div>
                     </div>
@@ -209,8 +209,16 @@
             </div>
             
             <!-- Main Contact Content -->
-            <div class="main-contact-content ptb-100">
+            <div class="main-contact-content ptb-30">
                 <div class="container">
+                    <div class="section-title text-center mb-3">
+                        <h2>Get in Touch</h2>
+                        <p class="lead">We'd Love to Hear from You</p>
+                        <p class="text-muted">
+                            Whether you have questions, need guidance, or simply want to share your heart, our team is here to listen and help. 
+                            Private inquiries, prayer requests, and service details are all welcome. We treat every message with care and confidentiality.
+                        </p>
+                    </div>
                     <!-- Contact Info Cards -->
                     <div class="contact-info-section">
                         <div class="row">
@@ -267,15 +275,6 @@
                     <div class="contact-form-section mt-5">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="section-title text-center mb-5">
-                                    <h2>Get in Touch</h2>
-                                    <p class="lead">We'd Love to Hear from You</p>
-                                    <p class="text-muted">
-                                        Whether you have questions, need guidance, or simply want to share your heart, our team is here to listen and help. 
-                                        Private inquiries, prayer requests, and service details are all welcome. We treat every message with care and confidentiality.
-                                    </p>
-                                </div>
-                                
                                 <div class="contact-form-wrapper">
                                     <div class="form-intro mb-4">
                                         <p>Fill out the form below, and we'll respond as swiftly as a freshly baked loaf cools! (Usually within 24 hours.)</p>

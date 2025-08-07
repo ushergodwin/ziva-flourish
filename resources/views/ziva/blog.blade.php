@@ -9,6 +9,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
     @include('common.meta')
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Libre Franklin", sans-serif;
+        }
+        <style>
+    /* Base font for entire page */
+    body {
+        font-family: "Libre Franklin", sans-serif !important;
+    }
+    
+    /* Nuclear option for all text elements */
+    body *:not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.glyphicon) {
+        font-family: "Libre Franklin", sans-serif !important;
+    }
+    
+    /* Specific targeting for blog content areas */
+    .article-text,
+    .article-text *,
+    .article-desc,
+    .article-desc *,
+    .blog-comment-box,
+    .blog-comment-box *,
+    .articles-details,
+    .articles-details * {
+        font-family: "Libre Franklin", sans-serif !important;
+    }
+    
+    /* Override for rich text editor content */
+    .article-text p,
+    .article-text h1,
+    .article-text h2,
+    .article-text h3,
+    .article-text h4,
+    .article-text h5,
+    .article-text h6,
+    .article-text li,
+    .article-text a,
+    .article-text span,
+    .article-text div,
+    .article-text blockquote,
+    .article-text pre,
+    .article-text strong,
+    .article-text em {
+        font-family: "Libre Franklin", sans-serif !important;
+    }
+    
+    /* Force font on elements with inline styles */
+    [style*="font-family"] {
+        font-family: "Libre Franklin", sans-serif !important;
+    }
+    
+    /* Fix for SVG icons if needed */
+    .zmdi, .fa {
+        font-family: 'Material-Design-Iconic-Font' !important;
+    }
+</style>
 </head>
 
 <body>
