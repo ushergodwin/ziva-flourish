@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pricing-plan ptb-100">
+            <div class="pricing-plan ptb-30">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 offset-md-2">

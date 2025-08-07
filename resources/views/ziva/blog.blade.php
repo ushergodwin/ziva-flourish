@@ -37,7 +37,7 @@
             </div>
             <!--Breadcrumbs end-->
             <!--our gallery section start-->
-            <div class="our-blog blog-pages ptb-100 fix">
+            <div class="our-blog blog-pages ptb-30 fix">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">

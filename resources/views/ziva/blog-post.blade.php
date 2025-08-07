@@ -57,7 +57,7 @@
                 </div>
                 <!--Breadcrumbs end-->
                 <!--our gallery section start-->
-                <div class="our-blog-details ptb-100">
+                <div class="our-blog-details ptb-30">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9 col-sm-12 col-xs-12">

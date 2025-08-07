@@ -33,7 +33,7 @@
                 <!--Breadcrumbs end-->
                 
                 <!--About us start-->
-                <div class="about-us ptb-100">
+                <div class="about-us ptb-30">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 col-sm-12 col-xs-12">

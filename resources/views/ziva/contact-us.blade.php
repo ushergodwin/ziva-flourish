@@ -33,13 +33,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="section-title text-center">
-                            <h2>{{ $page?->title }}</h2>
-                        </div>
-                        <div class="section-title text-center">
-                                    
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="section-title text-center">
+                                <h2>{{ $page?->title }}</h2>
+                            </div>
+                            <div class="section-title text-center">
+                                        
+                            </div>
                         </div>
                     </div>
                 </div>

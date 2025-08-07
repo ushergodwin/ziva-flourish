@@ -51,7 +51,7 @@
             </div>
             
             <!-- Service Details Section -->
-            <section class="service-details pt-100 pb-70">
+            <section class="service-details pt-30 pb-70">
                 <div class="container">
                     <div class="row">
                         <!-- Main Content -->

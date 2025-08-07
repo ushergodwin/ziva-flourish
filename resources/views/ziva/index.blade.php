@@ -38,14 +38,11 @@
                                             <div class="slide1-text">
                                                 <div class="middle-text">
                                                     <div class="title-1 wow rotateInDownRight" data-wow-duration="0.9s" data-wow-delay="0s">
-                                                        <h1>welcome {{ config('app.name') }}</h1>
+                                                        {{-- <h1>welcome {{ config('app.name') }}</h1> --}}
                                                     </div>	
                                                     <div class="desc wow slideInRight" data-wow-duration="1.2s" data-wow-delay="0.2s">
-                                                        <p>{{ $ad->caption }}</p>
+                                                        {{-- <p>{{ $ad->caption }}</p> --}}
                                                     </div>
-                                                    {{-- <div class="explore-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
-                                                        <a href="#">Explore now</a>
-                                                    </div>	 --}}
                                                 </div>	
                                             </div>				
                                         </div>
@@ -63,7 +60,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12 col-xs-12">
                             <div class="about-img">
-                                <img src="{{ asset('storage/'.$aboutUs->image) }}" alt="">
+                                <img src="{{ asset('storage/'.$aboutUs->image) }}" alt="" height="520">
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
@@ -78,7 +75,7 @@
             </div>
             <!--welcome section end-->
             <!--fun fact area-->
-            <div class="fun-fact text-center ptb-100" style="background-image: url('{{ asset('storage/' . $ourImpact?->background_image) }}')">
+            <div class="fun-fact text-center ptb-30" style="background-image: url('{{ asset('storage/' . $ourImpact?->background_image) }}')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-xs-12">
