@@ -132,7 +132,7 @@ class HomeController extends Controller
 
     public function services()
     {
-        $services = Service::where('is_active', true)->get();
+        $services = Service::with('category')->where('is_active', true)->get();
         $company = CompanyInfo::first();
         $openingHours = OpeningHour::all();
         return view('ziva.services', [

@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Str;
 
 class ServiceCategoryResource extends Resource
 {
@@ -26,8 +27,12 @@ class ServiceCategoryResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('slug')->required()->unique(ignoreRecord: true),
+                TextInput::make('name')->required()
+                    ->reactive()
+                    ->afterStateUpdated(function (callable $set, $state) {
+                        $set('slug', Str::slug($state));
+                    }),
+                TextInput::make('slug')->required()->dehydrated()->disabled(),
                 Textarea::make('description')->rows(3),
             ]);
     }

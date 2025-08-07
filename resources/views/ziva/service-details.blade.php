@@ -61,7 +61,6 @@
                                     <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->name }}" class="img-responsive">
                                 </div>
                                 <h3>{{ $service->name }}</h3>
-                                <p>{!! $service->short_description !!}</p>
                                 <p>{!! $service->full_description !!}</p>
                                 <p>{!! $service->price_note !!}</p>
                             </div>
@@ -85,7 +84,7 @@
                                 <!-- Booking Form -->
                                 <div class="widget booking-form mt-30">
                                     <h4>Book This Service</h4>
-                                    <form  method="POST" id="book-service-form" onsubmit="bookServiceFromDetails('{{ $service->name }}', '{{ $company->whatsapp }}')">
+                                    <form  method="POST" id="book-service-form">
                                         @csrf
                                         <input type="hidden" name="service_id" value="{{ $service->id }}">
                                         <style>
@@ -137,7 +136,9 @@
                                                 <textarea id="swal-message" class="form-control mb-2" name="message" placeholder="Any additional message or request"></textarea>
                                             </div>
                                             <div class="book-now">
-                                                <button style="submit" class="btn btn-success rounded">Book Now</button>
+                                                <button type="button" class="btn btn-success rounded" onclick="bookServiceFromDetails('{{ $service->name }}', '{{ $company->whatsapp }}', '{{ $service->book_button_text}}')">
+                                                    {{ $service->book_button_text }}
+                                                </button>
                                             </div>
                                         </form>
                                     </div>

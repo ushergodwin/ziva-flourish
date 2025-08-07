@@ -55,7 +55,7 @@ class AppController extends Controller
                 'preferred_date' => 'required|date',
                 'notes' => 'nullable|string|max:500',
                 'service_name' => 'nullable|string|max:100',
-                'preferred_time' => 'string|max:10',
+                'preferred_time' => 'nullable|string|max:10',
                 'number_of_people' => 'nullable|integer|min:1|max:100',
             ]);
 

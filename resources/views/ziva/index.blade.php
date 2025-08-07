@@ -145,9 +145,9 @@
                                         </a>
                                     </div>
                                     <div class="pricing-desc">
-                                        <a href="/services/{{ $item?->slug}}">
+                                        @if ($item?->price > 0)
                                             <h2>{{ number_format($item?->price)}}<span class="date">ugx</span></h2>
-                                        </a>
+                                        @endif
                                         <ul>
                                             <li>
                                                 <a href="/services/{{ $item?->slug}}">
@@ -156,7 +156,9 @@
                                             </li>
                                         </ul>
                                         <div class="book-now">
-                                            <a href="javascript:void(0)" onclick="bookService('{{ $item->name }}', '{{ $company->whatsapp }}', '{{ $item->id}}')" >Book now</a>
+                                            <a href="javascript:void(0)" onclick="bookService('{{ $item->name }}', '{{ $company->whatsapp }}', '{{ $item->id}}', '{{ $item->book_button_text}}')" >
+                                                {{ $item->book_now_text ?? 'Book now' }}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

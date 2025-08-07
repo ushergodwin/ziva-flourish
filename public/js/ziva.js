@@ -374,9 +374,24 @@ $(document).ready(function () {
         });
     });
 });
-const bookService = (serviceName, whatsappNumber) => {
+const bookService = (
+    serviceName,
+    whatsappNumber,
+    service_id,
+    book_button_text
+) => {
+    let heading = "Book";
+    if (book_button_text.toLowerCase() === "book now") {
+        heading = "Book";
+    } else if (book_button_text.toLowerCase() === "order now") {
+        heading = "Order";
+    } else if (book_button_text.toLowerCase() === "reserve now") {
+        heading = "Reserve";
+    } else if (book_button_text.toLowerCase() === "claim now") {
+        heading = "Claim";
+    }
     Swal.fire({
-        title: `<h5>Book ${serviceName}</h5>`,
+        title: `<h5>${heading} ${serviceName}</h5>`,
         html: `<style>
                     .form-label {
                         text-align: left !important;
@@ -385,7 +400,7 @@ const bookService = (serviceName, whatsappNumber) => {
                 </style>
                 <hr/>
                 <div class="text-muted mb-1">
-                    Please fill in the details below to book the service.
+                    Please fill in the details below to ${heading.toLowerCase()} the service.
                 </div>
                 <div class="mb-1">
                     <label for="swal-name" class="form-label">Full Name</label>
@@ -426,7 +441,7 @@ const bookService = (serviceName, whatsappNumber) => {
                     <textarea id="swal-message" class="form-control mb-2" placeholder="Any additional message or request"></textarea>
                 </div>
             `,
-        confirmButtonText: "Continue to Book",
+        confirmButtonText: `${heading} Now`,
         confirmButtonColor: "#253d2b",
         showCancelButton: true,
         focusConfirm: false,
@@ -457,13 +472,23 @@ const bookService = (serviceName, whatsappNumber) => {
                 return false;
             }
 
-            return { name, email, phone, date, message, time, numberOfPeople };
+            return {
+                name,
+                email,
+                phone,
+                date,
+                message,
+                time,
+                numberOfPeople,
+            };
         },
     }).then((result) => {
         if (result.isConfirmed) {
             const { name, email, phone, date, message, time, numberOfPeople } =
                 result.value;
-            let textMessage = `Hello, I would like to book for *${serviceName}*.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\nPreferred Time: ${time}\nNumber of People: ${numberOfPeople}`;
+            let textMessage = `Hello, I would like to book for *${serviceName}*.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\nPreferred Time: ${
+                time || `N/A`
+            }\nNumber of People: ${numberOfPeople}`;
             if (message) {
                 textMessage += `\n\n ${message}`;
             }
@@ -533,10 +558,26 @@ const bookService = (serviceName, whatsappNumber) => {
     });
 };
 
-const bookServiceFromDetails = (serviceName, whatsappNumber) => {
+const bookServiceFromDetails = (
+    serviceName,
+    whatsappNumber,
+    book_button_text
+) => {
+    let heading = "Book";
+    if (book_button_text.toLowerCase() === "book now") {
+        heading = "Book";
+    } else if (book_button_text.toLowerCase() === "order now") {
+        heading = "Order";
+    } else if (book_button_text.toLowerCase() === "reserve now") {
+        heading = "Reserve";
+    } else if (book_button_text.toLowerCase() === "claim now") {
+        heading = "Claim";
+    }
     Swal.fire({
-        html: `You are about to book the service: <strong>${serviceName}</strong>. Book Now?`,
-        confirmButtonText: "Yes, Book Now",
+        html: `You are about to ${
+            heading.toLowerCase() + ` for`
+        }: <strong>${serviceName}</strong>. Proceed and ${heading.toLowerCase()} now?`,
+        confirmButtonText: `Yes, ${heading} Now`,
         confirmButtonColor: "#253d2b",
         showCancelButton: true,
         focusConfirm: false,
@@ -575,7 +616,9 @@ const bookServiceFromDetails = (serviceName, whatsappNumber) => {
                 return;
             }
 
-            let textMessage = `Hello, I would like to book for *${serviceName}*.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${preferred_date}\nPreferred Time: ${preferred_time}\nNumber of People: ${number_of_people}`;
+            let textMessage = `Hello, I would like to book for *${serviceName}*.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${preferred_date}\nPreferred Time: ${
+                preferred_time || `N/A`
+            }\nNumber of People: ${number_of_people}`;
             if (message) {
                 textMessage += `\n\n ${message}`;
             }
@@ -601,7 +644,7 @@ const bookServiceFromDetails = (serviceName, whatsappNumber) => {
                 },
                 beforeSend: function () {
                     Swal.fire({
-                        title: "Booking...",
+                        title: "Processing...",
                         text: "Please wait while we process your booking.",
                         allowOutsideClick: false,
                         didOpen: () => Swal.showLoading(),
