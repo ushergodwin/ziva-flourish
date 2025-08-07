@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-md-12 col-xs-12 col-sm-12">
                             <div class="breadcrumbs-title">
-                                <h2>{{ $page?->title }}</h2>
+                                
                             </div>
                         </div>
                     </div>
@@ -34,6 +34,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
+                                <div class="section-title text-center">
+                                    <h2>{{ $page?->title }}</h2>
+                                </div>
                                 <div class="section-title text-center">
                                     <p> Take the first step toward nourishment, healing and transformation. Whether you are looking to sharpen your culinary skills, receive Christ-centered counselling, explore personal or business growth, we are here to tale the journey with you. </p>
                                 </div>

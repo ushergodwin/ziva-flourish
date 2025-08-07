@@ -209,7 +209,8 @@
                 </div>
             </div>
             <!--Testimonial start-->
-            <div class="testimonial" style="background-image: url('{{ asset('storage/' . $page->background_image) }}')">
+            <!-- style="background-image: url('{{ asset('storage/' . $page->background_image) }}')" -->
+            <div class="testimonial">
                 <div>
                     <div class="container">
                         <div class="row">
@@ -236,7 +237,7 @@
             <!--Testimonial end-->
             <!--our blog start-->
             <hr>
-            <div class="our-blog pt-100">
+            <div class="our-blog pt-100 grey-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">

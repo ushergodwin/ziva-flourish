@@ -27,21 +27,23 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="breadcrumbs-title">
-                                    <h2>Contact us</h2>
+                                  
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--Breadcrumbs end-->
-                <div id="contact-map" class="map-area">
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe id="gmap_canvas" style="width:100%;height:500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.699293619604!2d32.60462951091904!3d0.4425724638175614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db1b3bb2d5aa3%3A0x3607feb0c8c8bbae!2sEunie&#39;s%20Kitchen!5e0!3m2!1sen!2sug!4v1752233487445!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
+                <div class="row mt-3">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="section-title text-center">
+                            <h2>{{ $page?->title }}</h2>
+                        </div>
+                        <div class="section-title text-center">
+                                    
                         </div>
                     </div>
-                </div> 
+                </div>
+                <!--Breadcrumbs end-->
                 <!--Contact start-->
                 <div class="contact-us">
                     <div class="container">
@@ -132,7 +134,14 @@
                 </div>
                 <!--Contact form end-->
                 
-
+                <div id="contact-map" class="map-area">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe id="gmap_canvas" style="width:100%;height:500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.699293619604!2d32.60462951091904!3d0.4425724638175614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db1b3bb2d5aa3%3A0x3607feb0c8c8bbae!2sEunie&#39;s%20Kitchen!5e0!3m2!1sen!2sug!4v1752233487445!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
+                        </div>
+                    </div>
+                </div> 
                 <!--footer start-->
                 
                 @include('common.footer')

@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-md-12 col-xs-12 col-sm-12">
                             <div class="breadcrumbs-title">
-                                <h2>{{ $page?->title }}</h2>
+                            
                             </div>
                         </div>
                     </div>
@@ -71,11 +71,11 @@
                             <div class="sidebar-widget">
                                 <!-- Service Categories -->
                                 <div class="widget categories">
-                                    <h4>Our Services</h4>
+                                    <h4>Similar Services</h4>
                                     <ul>
                                         @foreach($relatedServices as $related)
                                         <li>
-                                            <a href="{{ route('services.show', $related->slug) }}">{{ $related->name }}</a>
+                                            - <a href="{{ route('services.show', $related->slug) }}">{{ $related->name }}</a>
                                         </li>
                                         @endforeach
                                     </ul>
