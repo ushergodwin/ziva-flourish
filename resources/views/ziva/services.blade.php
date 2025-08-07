@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    @include('common.early-access')
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->  
@@ -44,7 +43,7 @@
                         </div>
                         <div class="row mb-n-30px">
                             @foreach ($services as $item)
-                                <div class="col-lg-4 col-md-6 col-sm-12 mb-30px service-hover-effect">
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-30px service-hover-effect h-100">
                                     <a href="/services/{{ $item?->slug}}">
                                         <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
                                     </a>

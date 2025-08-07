@@ -29,6 +29,8 @@ class HomeController extends Controller
 
     public function index()
     {
+        // Uncomment the line below to redirect to the countdown page
+        return view('ziva.countdown');
         $aboutUs = About::first();
         $ads = Ad::where('is_active', true)->get();
         $company = CompanyInfo::first();
