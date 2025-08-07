@@ -16,15 +16,33 @@
                                         <span style="font-size: 20px"><i class="zmdi zmdi-email"></i></span>
                                         {{ $company?->email }}
                                     </p>
-                                  
+                                    
                                     <p>
                                         <span style="font-size: 20px"><i class="zmdi zmdi-phone"></i></span> 
                                         {{ $company?->phone_1 }}
-                                        <br>
-                                        <span style="font-size: 20px"><i class="zmdi zmdi-phone"></i></span>
-                                        {{ $company?->phone_2 }}
+                                        @if ($company?->phone_2)
+                                            <br>
+                                            <span style="font-size: 20px"><i class="zmdi zmdi-phone"></i></span>
+                                            {{ $company?->phone_2 }}
+                                        @endif
+                                        @if ($company?->phone_3)
+                                            <br>
+                                            <span style="font-size: 20px"><i class="zmdi zmdi-phone"></i></span>
+                                            {{ $company?->phone_3 }}
+                                        @endif
+                                        @if ($company?->phone_4)
+                                            <br>
+                                            <span style="font-size: 20px"><i class="zmdi zmdi-phone"></i></span>
+                                            {{ $company?->phone_4 }}
+                                        @endif
                                     </p>
                                   
+                                    Follow Us On
+                                    <div class="d-flex gap-3">
+                                        <a href="{{ $company?->youtube }}"><i class="zmdi zmdi-youtube"></i></a>
+                                        <a href="{{ $company?->twitter }}"><i class="zmdi zmdi-twitter"></i></a>
+                                        <a href="{{ $company?->instagram }}"><i class="zmdi zmdi-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-6 col-xs-12">

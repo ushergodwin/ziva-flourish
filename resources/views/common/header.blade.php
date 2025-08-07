@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="social-icons">
-                                    <a href="{{ $company?->facebook }}"><i class="zmdi zmdi-facebook"></i></a>
+                                    <a href="{{ $company?->youtube }}"><i class="zmdi zmdi-youtube"></i></a>
                                     <a href="{{ $company?->twitter }}"><i class="zmdi zmdi-twitter"></i></a>
                                     <a href="{{ $company?->instagram }}"><i class="zmdi zmdi-instagram"></i></a>
                                     <a href="javascript:void(0)" onclick="openWhatsApp('{{$company?->whatsapp}}')"><i class="zmdi zmdi-whatsapp"></i></a>

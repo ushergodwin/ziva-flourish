@@ -955,8 +955,6 @@ img {
     width: 100%;
 }
 .pricing-table:before {
-    background: rgba(0, 0, 0, 0) url("images/common/pricing-1.png") no-repeat
-        scroll right bottom;
     bottom: 0;
     content: "";
     height: 100%;
@@ -968,8 +966,6 @@ img {
     z-index: -9;
 }
 .pricing-table:hover {
-    background: rgba(0, 0, 0, 0) url("images/common/pricing-2.png") no-repeat
-        scroll -150px 0;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }

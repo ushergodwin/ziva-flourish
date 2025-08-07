@@ -35,10 +35,10 @@
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
                                 <div class="section-title text-center">
-                                    <h2>{{ $page?->title }}</h2>
+                                    <h2>Explore Our Services</h2>
                                 </div>
                                 <div class="section-title text-center">
-                                    <p> Take the first step toward nourishment, healing and transformation. Whether you are looking to sharpen your culinary skills, receive Christ-centered counselling, explore personal or business growth, we are here to tale the journey with you. </p>
+                                    <p> Our carefully curated blend of services are designed to nature the body, renew the mind and restore the spirit. <br/>They include: </p>
                                 </div>
                             </div>
                         </div>

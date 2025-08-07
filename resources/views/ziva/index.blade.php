@@ -119,7 +119,7 @@
             </div>
             <!--Video section end-->
             <!--pricing palaning start-->
-            <div class="pricing-plan ptb-100">
+            <div class="pricing-plan ptb-30">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-n-30px">
+                    <div class="row mb-n-30px mb-3">
                         @foreach ($services as $item)
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-30px">
                                 <a href="/services/{{ $item?->slug}}">
@@ -173,7 +173,7 @@
                 </div>
             </div>
             <!--pricing palaning end-->
-            <div class="choose-us ptb-100 grey-bg">
+            <div class="choose-us ptb-30 grey-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
@@ -234,7 +234,7 @@
             <!--Testimonial end-->
             <!--our blog start-->
             <hr>
-            <div class="our-blog pt-100 grey-bg">
+            <div class="our-blog pt-30 grey-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
