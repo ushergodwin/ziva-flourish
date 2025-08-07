@@ -459,3 +459,8 @@ small {
         box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
     }
 }
+
+.service-hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}

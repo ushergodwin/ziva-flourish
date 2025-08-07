@@ -44,7 +44,7 @@
                         </div>
                         <div class="row mb-n-30px">
                             @foreach ($services as $item)
-                                <div class="col-lg-4 col-md-6 col-sm-12 mb-30px">
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-30px service-hover-effect">
                                     <a href="/services/{{ $item?->slug}}">
                                         <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
                                     </a>

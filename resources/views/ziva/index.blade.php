@@ -131,7 +131,7 @@
                     </div>
                     <div class="row mb-n-30px mb-3">
                         @foreach ($services as $item)
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-30px">
+                            <div class="col-lg-4 col-md-6 col-xs-12 mb-30px service-hover-effect">
                                 <a href="/services/{{ $item?->slug}}">
                                     <img src="{{ asset('storage/'.$item?->image)}}" alt="{{ $item?->name }}" class="img-fluid">
                                 </a>
@@ -145,7 +145,7 @@
                                         @if ($item?->price > 0)
                                             <h2>{{ number_format($item?->price)}}<span class="date">ugx</span></h2>
                                         @endif
-                                        <ul>
+                                        <ul class="ml-1 mr-1">
                                             <li>
                                                 <a href="/services/{{ $item?->slug}}">
                                                     {{ $item?->price_note }}
