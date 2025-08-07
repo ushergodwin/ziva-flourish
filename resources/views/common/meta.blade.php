@@ -5,7 +5,7 @@
 <meta name="author" content="Ziva Flourish Centre">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://thezivaflourishacademy.com">
+<meta property="og:url" content="https://zivaflourishcentre.com">
 <meta property="og:title" content="Ziva Flourish Centre | Culinary Arts & Soul Wellness">
 <meta property="og:description" content="Join a Christ-centered space in Kasangati offering cookery classes, therapy, spice blends, and holistic growth.">
 <meta property="og:image" content="{{ asset('ziva-logo-rounded.png')}}">
